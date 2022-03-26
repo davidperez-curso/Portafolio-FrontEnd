@@ -130,9 +130,25 @@ async function hideAndroid() {
 
 //esconder slide
 const slideCont = document.querySelector(".slideshow-container");
-function showSlide() {
-    slideCont.style.display = "flex";
-    slideCont.setAttribute("class", "slideshow-container animate__animated animate__fadeIn")
+function showSlideAsync() {
+    return new Promise((resolve,reject)=>{
+        Adiv.setAttribute("class", "android-container animate__animated animate__fadeOut");
+        slideCont.setAttribute("class", "slideshow-container animate__animated animate__fadeIn");
+        resolve();
+    })
+}
+
+async function showSlide() {
+    await showSlideAsync();
+
+    setTimeout(() => {
+        slideCont.style.display = "flex";
+        Adiv.style.display = 'none';
+        
+    }, 1000);
+    
+    
+    
 };
 function slideAsync() {
     return new Promise((resolve, reject) => {
@@ -151,13 +167,15 @@ async function hideSlide() {
 function slideBackAsync() {
     return new Promise((resolve, reject) => {
         slideCont.setAttribute("class", "slideshow-container animate__animated animate__fadeOut");
+        Adiv.setAttribute("class", "android-container animate__animated animate__fadeIn");
         resolve();
     })
 };
 async function hideBackSlide() {
     await slideBackAsync();
     setTimeout(() => {
-        slideCont.style.display = "none"
+        slideCont.style.display = "none";
+        Adiv.style.display = "flex";
     }, 1000);
 };
 //esconder About me
