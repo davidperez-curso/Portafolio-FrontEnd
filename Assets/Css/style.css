@@ -1,0 +1,708 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url('https://i.ibb.co/SQ1Vvcz/fondo1.jpg');
+    font-family: 'Roboto Mono', monospace;
+}
+/* Pantalla About me */
+.aboutme-container{
+    position: absolute; left: 0px; top: 0px; z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: rgba(214, 214, 214, 0.4);
+    backdrop-filter: blur(7px);
+    display: none; 
+    grid-template-columns: 0.7fr 1.5fr 0.8fr; 
+    grid-template-rows: 0.7fr 1.6fr 0.7fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    ". . ."
+    ". container-datos ."
+    ". footer ."; 
+}
+.container-datos {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 0.6fr 1.4fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "info info picture"
+      "skills . picture"
+      "skills about about"; 
+    grid-area: container-datos; 
+  }
+.footer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . btn"
+      ". . ."
+      ". . ."; 
+    grid-area: footer; 
+}
+
+.picture { 
+    grid-area: picture; 
+    background: #013b65a2;
+    height: 100%;
+    border-radius: 10px;
+}
+.info { 
+    grid-area: info; 
+    background: #e3e3e3c5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+}
+.about { 
+    grid-area: about; 
+    background: #e3e3e3c5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+}
+.about-texto{
+    text-align: justify;
+    margin: 1em;
+}
+.skills { 
+    grid-area: skills; 
+    background: #013b65a2;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+}
+.btn { 
+    grid-area: btn; 
+    margin-top: 1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Pantalla Algunos ejercicios */
+.ghost-container{
+    position: absolute; left: 0px; top: 0px; z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: rgba(214, 214, 214, 0.4);
+    backdrop-filter: blur(7px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 35%;
+    height: 60%;
+    background: #E3E3E3;
+    opacity: 0.8;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1em;
+}
+.texto, .back{
+    font-weight: 700;
+    font-size: 24px;
+    margin-right: 3em;
+    margin-left: 3em;
+    text-align: justify;
+}
+.cont-enlaces{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cont-back{
+    display: flex;
+    justify-content: flex-end;
+}
+.back{
+    color: #013B65;
+    padding: 10px;
+    cursor: pointer;
+}
+.enlaces1, .enlaces2{
+    color: black !important;
+    text-align: center;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-top: 1em;
+    font-size: 36px;
+    line-height: 47px;
+    background: rgba(41, 102, 158, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.enlaces1:before{
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(53, 53, 160, 0.267);
+    transition: all 1s ease; 
+}
+.enlaces2:before{
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(53, 53, 160, 0.267);
+    transition: all 1s ease; 
+}
+.enlaces1:hover:before{
+    width: 100%;
+}
+.enlaces2:hover:before{
+    width: 100%;
+}
+
+/* Pantalla Apps Android */
+.android-container{
+    position: absolute; left: 0px; top: 0px; z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: rgba(214, 214, 214, 0.4);
+    backdrop-filter: blur(7px);
+    display: none;
+    flex-direction:column;
+    justify-content: space-evenly;
+    
+}
+.cont-card-android{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+.card-android{
+    width: 35%;
+    height: 100%;
+    background: #E3E3E3;
+    opacity: 0.8;
+    border-radius: 40px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.cont-btn{
+    display: flex;
+    justify-content: center;
+}
+.texto-android{
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 3em;
+    margin-right: 3em;
+    margin-left: 3em;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.cont-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.android-img{
+    width: 30%;
+}
+
+/* Pantalla Slider-imágenes */
+.slideshow-container{
+    position: absolute; left: 0px; top: 0px; z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: rgba(214, 214, 214, 0.4);
+    backdrop-filter: blur(7px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cont-slides{
+    display: flex;
+    align-items: center;
+}
+.mySlides{
+    display: none;
+}
+.slide-img{
+    border-radius: 15px;
+}
+.prev, .next{
+    margin: 1em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* animación */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.dot{
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.active, .dot:hover, .prev:hover, .next:hover{
+    background-color: #7171719a;
+    color: white;
+}
+
+.cont-menu{
+    display: flex;
+    flex-direction: row;
+    
+}
+.menuBack, .menuHome{
+    cursor: pointer;
+    color: #013B65;
+    margin: 0.5em;
+}
+
+/* Pantalla Principal - Index */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    height: 15%;
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+}
+.icon{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.blur{
+    background: rgba(214, 214, 214, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.first{
+    font-weight: 700;
+    font-size: 64px;
+}
+.second{
+    font-weight: 700;
+    font-size: 72px;
+}
+.third{
+    font-weight: 700;
+    font-size: 144px;
+}
+span{
+    color: #013B65;
+}
+
+footer{
+    background: rgba(41, 102, 158, 0.4);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    border: none;
+    cursor: pointer;
+    width: 480px;
+    height: 80px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 36px;
+    background: rgba(248, 248, 248, 0.521);
+    backdrop-filter: blur(4px);
+    transition: all 2s ease;
+}
+button:hover{
+    background: rgba(25, 55, 95, 0.644);
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    /* Principal */
+    header{
+        margin-top: 1em;
+        font-size: 24px;
+        flex-direction: column;
+    }
+    .first, .second, .third{
+        font-size: 30px;
+    }
+    section{
+        justify-content: space-evenly;
+    }
+    footer{
+        flex-direction: column;
+    }
+    button{
+        font-size: 18px;
+        width: 250px;
+        height: 50px;
+    }
+    /* Links */
+    .card{
+        width: 100%;
+        height: 80%;
+    }
+    .texto, .enlaces1, .enlaces2{
+        font-size: 16px;
+    }
+    /* Android */
+    .android-container{
+        height: 150%;
+    }
+    .cont-card-android{
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+    }
+    .card-android{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .texto-android{
+        font-size: 12px;
+    }
+    /* Slides */
+    .cont-slides{
+        flex-direction: column;
+    }
+    .slide-img{
+        width: 100%;
+    }
+
+    /* About me */
+    .aboutme-container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "container-datos"
+          "footer";
+        grid-area: aboutme-container;
+    }
+      
+    .container-datos {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr 0.8fr;
+        gap: 5px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "picture"
+          "info"
+          "about"
+          "skills";
+        grid-area: container-datos;
+    }
+      
+    .picture { grid-area: picture; }
+      
+    .info { 
+        grid-area: info; 
+        font-size: 12px;
+    }
+      
+    .about { 
+        grid-area: about; 
+        font-size: 12px;
+    }
+      
+    .skills { 
+        grid-area: skills;
+        font-size: 12px; 
+    }
+      
+    .footer { grid-area: footer;}
+    .btn{justify-content: center;}
+      
+}
+@media screen and (max-width: 699px) and (min-width: 481px) {
+    /* Principal  */
+    header{
+        margin-top: 1em;
+        font-size: 24px;
+    }
+    .first, .second, .third{
+        font-size: 30px;
+    }
+    section{
+        justify-content: space-evenly;
+    }
+    footer{
+        flex-direction: row;
+    }
+    button{
+        font-size: 18px;
+        width: 250px;
+        height: 50px;
+    }
+    /* Links */
+    .card{
+        width: 100%;
+        height: 80%;
+    }
+    .texto, .enlaces1, .enlaces2{
+        font-size: 16px;
+    }
+    /* Android */
+    .android-container{
+        height: 130%;
+    }
+    .cont-card-android{
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+    }
+    .card-android{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .texto-android{
+        font-size: 12px;
+    }
+    /* Slides */
+    .cont-slides{
+        flex-direction: column;
+    }
+    .slide-img{
+        width: 100%;
+    }
+    /* About me */
+    .aboutme-container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "container-datos"
+          "footer";
+        grid-area: aboutme-container;
+    }
+      
+    .container-datos {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr 0.8fr;
+        gap: 5px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "picture"
+          "info"
+          "about"
+          "skills";
+        grid-area: container-datos;
+    }
+      
+    .picture { grid-area: picture; }
+      
+    .info { 
+        grid-area: info; 
+        font-size: 14px;
+    }
+      
+    .about { 
+        grid-area: about; 
+        font-size: 14px;
+    }
+      
+    .skills { 
+        grid-area: skills;
+        font-size: 14px; 
+    }
+      
+    .footer { grid-area: footer;}
+    .btn{justify-content: center;}
+    
+}
+@media screen and (max-width: 1024px) and (min-width: 700px){
+    header{
+        margin-top: 1em;
+        font-size: 24px;
+    }
+    .first, .second, .third{
+        font-size: 50px;
+    }
+    section{
+        justify-content: space-evenly;
+    }
+    footer{
+        flex-direction: row;
+    }
+    button{
+        font-size: 18px;
+        width: 250px;
+        height: 50px;
+    }
+    /* Links */
+    .card{
+        width: 100%;
+        height: 90%;
+    }
+    .texto, .enlaces1, .enlaces2{
+        font-size: 24px;
+    }
+    /* Android */
+    .android-container{
+        height: 130%;
+    }
+    .cont-card-android{
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+    }
+    .card-android{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .texto-android{
+        font-size: 20px;
+    }
+    .android-img{
+        width: 20%;
+    }
+    /* Slides */
+    .cont-slides{
+        flex-direction: row;
+    }
+    .slide-img{
+        width: 100%;
+    }
+    /* About me */
+    .aboutme-container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "container-datos"
+          "footer";
+        grid-area: aboutme-container;
+    }
+      
+    .container-datos {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr 0.8fr;
+        gap: 5px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "picture"
+          "info"
+          "about"
+          "skills";
+        grid-area: container-datos;
+    }
+      
+    .picture { grid-area: picture; }
+      
+    .info { 
+        grid-area: info; 
+        font-size: 20px;
+    }
+      
+    .about { 
+        grid-area: about; 
+        font-size: 20px;
+    }
+      
+    .skills { 
+        grid-area: skills;
+        font-size: 20px; 
+    }
+      
+    .footer { grid-area: footer;}
+    .btn{justify-content: center;}
+}
+@media only screen and (orientation: landscape)and (max-width: 850px){
+    /* Links */
+    .card{
+        width: 100%;
+        height: 90%;
+    }
+    .texto, .enlaces1, .enlaces2{
+        font-size: 14px;
+    }
+    /* Android */
+    .android-container{
+        height: 200%;
+    }
+    .cont-card-android{
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+    }
+    .card-android{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .texto-android{
+        font-size: 12px;
+    }
+    .android-img{
+        width: 15%;
+    }
+    /* Slides */
+    .cont-slides{
+        flex-direction: row;
+    }
+    .slide-img{
+        width: 100%;
+    }
+}

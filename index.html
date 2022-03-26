@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="/Assets/Css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Roboto Mono font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+    <!-- About me container -->
+    <div class="aboutme-container">
+        <div class="container-datos">
+            <div class="skills animate__animated animate__fadeInLeft animate__delay-2s">
+                <div>
+                    <h3>Habilidades</h3>
+                </div>
+                <div>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>JQuery</li>
+                    <li>JavaScript</li>
+                    <li>VueJS</li>
+                    <li>QuasarJS</li>
+                </div>
+                <div>
+                    <h3>Herramientas</h3>
+                </div>
+                <div>
+                    <li>Photoshop</li>
+                    <li>Figma</li>
+                </div>
+            </div>
+            <div class="about animate__animated animate__fadeInUp animate__delay-2s">
+                <div>
+                    <h3 style="margin-top: 1em;">About Me</h3>
+                </div>
+                <div>
+                    <p class="about-texto">Hola, me llamo David, soy de Chile, tengo 35 años, soy licenciado en Artes,
+                        estudié en la
+                        Universidad de Concepción,
+                        me gusta el cine, la música,
+                        las artes y todo lo relacionado al diseño. Hace poco hice un curso de front-end y me encantó
+                        ya
+                        que
+                        en el desarrollo de páginas web puedo implementar mi creatividad y hacer uso de mis
+                        conocimientos de
+                        composición artística, es por esto que quiero seguir aumentando mis habilidades y
+                        conocimientos
+                        en
+                        desarrollo web. Gracias por tu atención.
+                    </p>
+                </div>
+            </div>
+            <div class="info animate__animated animate__fadeInDown animate__delay-2s">
+                <div>
+                    <h3>Datos personales</h3>
+                    <br>
+                </div>
+                <div style="margin-left: 1em; margin-right: 1em;">
+                    <p>Nombre: David Pérez Charcas</p>
+                    <p>Carrera: Licenciatura en Artes / Desarrollador Front-End</p>
+                    <p>Lugar: Calama, Chile.</p>
+                </div>
+            </div>
+            <div class="picture animate__animated animate__fadeInRight animate__delay-2s"></div>
+        </div>
+        <div class="footer">
+            <div class="btn animate__animated animate__rotateIn animate__delay-3s"> <i onclick="hideAbout()"
+                    onmouseenter="moverBackF()" onmouseleave="quitarBackF()"
+                    class="iconF fa-solid fa-circle-chevron-left fa-4x"></i> </div>
+        </div>
+    </div>
+
+    <!-- Container links -->
+    <div class="ghost-container">
+        <div class="card">
+            <div class="texto">Estos son algunos ejercicios realizados en html con javascript, framework JQuery,
+                framework CSS Bootstrap y Framework VueJS.</div>
+            <div class="cont-enlaces">
+                <div class="enlaces1" onclick="window.open('https://davidperez-curso.github.io/final-modulo3/#')"
+                    target="_blank">
+                    Enlace 1
+                </div>
+                <div class="enlaces2" onclick="window.open('https://practical-gates-d4a2fd.netlify.app/')"
+                    target="_blank">
+                    Enlace 2
+                </div>
+            </div>
+            <div class="cont-back">
+                <div class="back"><i onmouseenter="moverBackB()" onmouseleave="quitarBackB()" onclick="hideDiv()"
+                        class="iconE fa-solid fa-circle-chevron-left fa-3x"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container Android -->
+    <div class="android-container">
+        <div class="cont-card-android">
+            <div class="card-android">
+                <div class="texto-android">
+                    <p>Aplicación android Lista de compras </p>
+                    <br>
+                    <p>Esta es una aplicación hecha con el framework QuasarJS, la cual hice pensando en una necesidad
+                        propia,
+                        la aplicación básicamente sirve para ir agregando items con su respectivo nombre, precio y
+                        cantidad,
+                        los valores de estos items se pueden modificar en cualquier momento y en el header de la
+                        aplicación
+                        estará
+                        el valor total sumado de todos los items, también se pueden agregar solamente como una lista de
+                        items,
+                        lo hice
+                        pensado hacia un uso en compras de tiendas idealmente supermercados.</p>
+                    <br>
+                    <p>Código QR PlayStore</p>
+                    <br>
+                </div>
+                <div class="cont-img"><img class="android-img" src="/Assets/img/qr-code.png" alt=""></div>
+            </div>
+            <div class="card-android">
+                <div class="texto-android">
+                    <p>Aplicación android Curso E-learning</p>
+                    <br>
+                    <p>Esta es una aplicación que estoy desarrollando con el framework QuasarJS en mi actual empresa,
+                        estoy
+                        a cargo del diseño y
+                        desarrollo frontend, consiste en un una aplicación en la
+                        que debes primero registrarte para poder acceder a los distintos menús de inicio, aula, perfil y
+                        configuración, la aplicación permite añadir material interactivo como videos y visualizar
+                        archivos pdf de lectura en los distintos módulos y lecciones del curso, también permite llevar
+                        un
+                        registro de porcentaje de cumplimiento y un registro del tiempo transcurrido
+                        en la sesión.
+                    </p>
+                    <br>
+
+                    <div>
+                        <button onclick="showSlide()">Galería de imágenes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont-btn">
+            <i onmouseenter="moverBack()" onmouseleave="quitarBack()" onclick="hideAndroid()"
+                style="color: #013B65; cursor: pointer;" class="iconD fa-solid fa-circle-chevron-left fa-4x"></i>
+        </div>
+    </div>
+
+    <!-- Container Slides -->
+    <div class="slideshow-container">
+        <div class="cont-slides">
+            <i class="prev fa-solid fa-angles-left fa-2x" onmouseenter="moverPrev()" onmouseleave="quitarPrev()"
+                onclick="plusSlides(-1)"></i>
+            <div class="mySlides fade">
+                <img class="slide-img" src="/Assets/img/0.png" alt=""">
+            </div> 
+            <div class=" mySlides fade">
+                <img class="slide-img" src="/Assets/img/0.1.png" alt=""">
+            </div>
+            <div class=" mySlides fade">
+                <img class="slide-img" src="/Assets/img/0.2.png" alt=""">
+            </div>
+            <div class=" mySlides fade">
+                <img src="/Assets/img/1.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/2.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/3.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/4.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/5.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/6.png" alt="" class="slide-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="/Assets/img/7.png" alt="" class="slide-img">
+            </div>
+            <i class=" next fa-solid fa-angles-right fa-2x" onmouseenter="moverNext()" onmouseleave="quitarNext()"
+                onclick="plusSlides(1)"></i>
+        </div>
+        <div class=" cont-dots">
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(1)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(2)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(3)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(4)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(5)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(6)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(7)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(8)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(9)"></i>
+            <i class="dot fa-regular fa-circle-dot" onclick="currentSlide(10)"></i>
+
+        </div>
+        <div class="cont-menu">
+            <i onclick="hideBackSlide()" onmouseenter="moverMenuBack()" onmouseleave="quitarMenuBack()"
+                class="menuBack fa-solid fa-circle-chevron-left fa-3x"></i>
+            <i onclick="hideSlide()" onmouseenter="moverMenuHome()" onmouseleave="quitarMenuHome()"
+                class="menuHome fa-solid fa-house fa-3x"></i>
+        </div>
+    </div>
+
+
+    <!-- Container principal -->
+    <div class=" container">
+        <header>
+            <div class="animate__animated animate__fadeIn animate__delay-2s">DAVID PÉREZ</div>
+            <div>
+                <a onclick="showAbout()" class="icon animate__animated animate__fadeIn animate__delay-2s">
+                    <i onmouseenter="moverPerfil()" onmouseleave="quitarPerfil()"
+                        class="iconA fa-solid fa-address-card fa-2x">
+                    </i>
+                </a>
+                <a href="https://www.linkedin.com/in/dperezch/" target="_blank"
+                    class="icon animate__animated animate__fadeIn animate__delay-3s">
+                    <i onmouseenter="moverLink()" onmouseleave="quitarLink()"
+                        class=" iconB fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a href="mailto:davarmando@gmail.com" target="_blank"
+                    class="icon animate__animated animate__fadeIn animate__delay-4s">
+                    <i onmouseenter="moverMail()" onmouseleave="quitarMail()"
+                        class="iconC fa-solid fa-envelope fa-2x"></i>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div class="first blur animate__animated animate__slideInLeft animate__delay-2s">
+                <p>Hola,</p>
+            </div>
+            <div class="second blur animate__animated animate__slideInLeft animate__delay-3s">
+                <p>estos son algunos</p>
+            </div>
+            <div class="third blur animate__animated animate__slideInLeft animate__delay-4s">
+                <p>de mis <span>trabajos</span></p>
+            </div>
+        </section>
+        <footer class="animate__animated animate__slideInUp animate__delay-4s">
+            <button onclick="showDiv()" class="animate__animated animate__zoomIn animate__delay-5s">Algunos
+                ejercicios</button>
+            <button onclick="showAndroid()" class="animate__animated animate__zoomIn animate__delay-5s">Apps
+                Android</button>
+        </footer>
+    </div>
+
+    <!-- Script -->
+    <script src="/Assets/Script/script.js"></script>
+
+</body>
+
+</html>
