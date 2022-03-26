@@ -441,7 +441,7 @@ button:hover{
     }
 
     /* About me */
-    .aboutme-container {  display: grid;
+    .aboutme-container {  display: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.2fr;
         gap: 0px 0px;
@@ -538,7 +538,7 @@ button:hover{
         width: 100%;
     }
     /* About me */
-    .aboutme-container {  display: grid;
+    .aboutme-container {  display: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.2fr;
         gap: 0px 0px;
@@ -637,7 +637,7 @@ button:hover{
         width: 100%;
     }
     /* About me */
-    .aboutme-container {  display: grid;
+    .aboutme-container {  display: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.2fr;
         gap: 0px 0px;
